@@ -5,9 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f2f5f7!important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.white-navbar{
+  padding: 8px 15px 8px 15px!important;
+  background-color: white!important;
+}
+
+.btn-bg{
+  background-color: #6558f5!important;
+}
+
+.login-pad{
+  height: 88vh;
+  align-items: center;
 }
