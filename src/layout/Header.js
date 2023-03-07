@@ -1,9 +1,22 @@
 import { Navbar, Nav } from 'react-bootstrap';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
+  const [logo, setLogo] = useState(null);
+
+  useEffect(() => {
+    axios.get(`https://paul.blueboxonline.com/api/v1/app/settings`)
+      .then(res => {
+        setLogo(res.data.logo);
+      });
+  }, []); 
+
   return(
     <Navbar className="white-navbar" expand="lg">
-      <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+      <Navbar.Brand href="#home">
+        <img src={logo} alt="" width="200px" height="50px" />
+      </Navbar.Brand>
 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
